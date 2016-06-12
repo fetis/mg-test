@@ -1,0 +1,19 @@
+@import "config";
+
+body {
+  background: $colorWhite;
+  color: $colorText;
+  font: $fontNormal Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+  font-size: 23px;
+  color: $colorGray;
+  margin: 0;
+}
+
+#chart {
+  width: 400px;
+  height: 400px;
+}
