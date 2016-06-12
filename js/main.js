@@ -24,24 +24,32 @@ document.addEventListener('DOMContentLoaded', () => {
       datasets: [{
         label: 'Wind Power, MW',
         data: dataPower,
-        backgroundColor: 'rgba(54, 162, 235, 0.4)'
+        backgroundColor: 'rgba(54, 162, 235, 0.4)',
+        yAxisID: 'y1',
+      }, {
+        label: 'Utilization, %',
+        fill: false,
+        type: 'line',
+        data: dataUtiliz,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        yAxisID: 'y2',
       }
-      // , {
-      //   label: 'Power',
-      //   type: 'line',
-      //   data: dataUtiliz,
-      //   backgroundColor: 'rgba(75, 192, 192, 0.2)'
-      // }
       ]
     },
     options: {
       scales: {
         xAxes: [{
-          // stacked: true
           type: 'time',
           time: {
             parser: 'DD.MM.YYYY HH:mm'
           }
+        }],
+        yAxes: [{
+          id: 'y1',
+          position: 'left'
+        }, {
+          id: 'y2',
+          position: 'right'
         }]
       }
     }
