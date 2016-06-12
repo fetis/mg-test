@@ -8,7 +8,7 @@
     "build-css": "node-sass scss --output dist/css",
     "build-js": "webpack",
     "build": "npm run build-css && npm run build-js",
-    "postinstall": "npm run bild"
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "ISC",
